@@ -3,7 +3,7 @@ import Data.List
 
 main :: IO ()
 main = do
-  input <- readCords <$> map (map (splitOn ",") . words) . lines <$> getContents
+  input <- readCords <$> map (map (splitOn ",") . words) . lines <$> readFile "input.txt"
   print $ part1 input
   print $ part2 input
 
